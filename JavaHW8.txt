@@ -1,0 +1,49 @@
+1.
+
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] mas = new int[8];
+
+        for (int i = 0; i < mas.length; i++) {
+            mas[i] = (int) (Math.random()*50)+1;
+        }
+        System.out.println(Arrays.toString(mas));
+
+        for(int i=0; i < mas.length; i++) {
+            if (i % 2 == 1)
+                mas[i] = 0;
+        }
+        System.out.println(Arrays.toString(mas));
+    }
+}
+
+
+2.
+
+package task2;
+
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] mas = new int[5];
+
+        for (int i = 0; i < mas.length; i++) {
+            mas[i] = (int) (Math.random() * 90) + 10;
+
+            System.out.println(Arrays.toString(mas));
+        }
+        for (int i = 0; i < mas.length; i++) {
+            if ( i > 0 ) {
+                if (mas[i-1] >= mas[i]) {
+                    System.out.println("The progression is not increasing");
+                    break;
+                }
+            }
+            if (i == mas.length - 1)
+                System.out.println("The sequence is strictly increasing");
+        }
+    }
+}
